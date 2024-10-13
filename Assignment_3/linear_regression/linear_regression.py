@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def load_data(filename):
     data = pd.read_csv(filename, header=None)
-    data.columns = ['Study Hours', 'Pass']
+    data.columns = ['Independent Variable', 'Dependent Variable']
     return data
 
 def calculate_parameters(x, y):
@@ -24,9 +24,9 @@ def calculate_parameters(x, y):
 def plot_regression_line(x, y, slope, intercept):
     plt.scatter(x, y, color='blue', label='Data Points')  
     plt.plot(x, slope * x + intercept, color='red', label='Regression Line')  
-    plt.xlabel('Study Hours')
-    plt.ylabel('Pass')
-    plt.title('Linear Regression on Study Hours vs Pass')
+    plt.xlabel('Independent Variable')
+    plt.ylabel('Dependent Variable')
+    plt.title('Linear Regression on Independent Variable vs Dependent Variable')
     plt.legend()
     plt.grid()
     plt.savefig('../results/linear_regression_plot.png') 
@@ -38,8 +38,8 @@ def main():
 
     print(data.head())  
 
-    x = data['Study Hours'].values
-    y = data['Pass'].values  
+    x = data['Independent Variable'].values
+    y = data['Dependent Variable'].values  
 
     slope, intercept = calculate_parameters(x, y)
 
