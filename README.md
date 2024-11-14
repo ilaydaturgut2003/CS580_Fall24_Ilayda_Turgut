@@ -1,24 +1,13 @@
 # CS580_Fall24_Ilayda_Turgut
 
-# Linear Regression Project
+# Perceptron Implementation with Gradient Descent and Heuristic Approach
 
-This project implements a simple linear regression analysis using Python. The code reads study hours and pass/fail results from a CSV file and generates a linear regression plot.
+Each approach is visualized with decision boundaries as they evolve through the training process. Additionally, a plot of the log loss over epochs is generated for the Gradient Descent approach.
 
-## Requirements
 
-- Python 3.x
-- pandas
-- numpy
-- matplotlib
+## Overview
+This project implements two versions of a perceptron to perform binary classification on a 2D dataset. The perceptron is trained to separate data points into two classes (0 and 1) using:
 
-You can install the required packages using pip:
+Heuristic Approach: Updates weights based on misclassified points.
+Gradient Descent Approach: Uses gradient descent to minimize the log loss function.
 
-```bash
-pip install pandas numpy matplotlib
-```
-
-Then to run the code:
-```bash
-cd linear_regression
-python linear_regression.py
-```
